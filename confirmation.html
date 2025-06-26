@@ -3,100 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Confirmed - LearnFast</title>
+    <title>LearnFast - Registration Confirmed!</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts - Inter -->
-    <link href="index.html">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* Light blue-gray background */
-            color: #334155; /* Dark slate text */
-        }
-        /* Custom scrollbar for a nicer look */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #cbd5e1; /* Gray-300 */
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #3b82f6; /* Blue-500 */
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #2563eb; /* Blue-600 */
+            background-color: #f8fafc; /* Light gray background */
+            color: #334155; /* Darker text */
         }
     </style>
 </head>
-<body class="antialiased">
+<body class="min-h-screen flex flex-col">
 
-    <!-- Header Section (reused from landing page for consistency) -->
-    <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-lg p-4 md:p-6 rounded-b-xl">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-4">
-            <!-- Logo/Brand Name -->
-            <a href="index.html" class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 md:mb-0">
-                Learn<span class="text-yellow-300">Fast</span>
-            </a>
-            <!-- Navigation -->
-            <nav>
-                <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 text-lg font-medium">
-                    <li><a href="index.html#features" class="hover:text-yellow-300 transition duration-300 ease-in-out">Features</a></li>
-                    <li><a href="index.html#about" class="hover:text-yellow-300 transition duration-300 ease-in-out">About Us</a></li>
-                    <li><a href="index.html#testimonials" class="hover:text-yellow-300 transition duration-300 ease-in-out">Testimonials</a></li>
-                    <li><a href="index.html#contact" class="hover:text-yellow-300 transition duration-300 ease-in-out">Contact</a></li>
-                </ul>
-            </nav>
+    <!-- Header Section (reused for consistency) -->
+    <header class="bg-white shadow-sm py-4 px-6 md:px-10 lg:px-16 flex justify-between items-center rounded-b-lg">
+        <div class="flex items-center">
+            <a href="index.html" class="text-3xl font-bold text-indigo-700 tracking-tight">LearnFast</a>
         </div>
+        <nav class="hidden md:flex space-x-8">
+            <a href="index.html" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300">Home</a>
+            <a href="course.html" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300">Courses</a>
+            <a href="about.html" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300">About Us</a>
+            <a href="register.html" class="text-indigo-600 hover:text-indigo-800 font-medium transition duration-300 px-4 py-2 rounded-lg border-2 border-indigo-600 hover:border-indigo-800">Sign Up</a>
+        </nav>
+        <!-- Mobile menu button (can add JS to toggle mobile menu) -->
+        <button class="md:hidden text-gray-600 hover:text-indigo-600 focus:outline-none">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
     </header>
 
-    <!-- Confirmation Section -->
-    <main class="container mx-auto px-4 my-8 md:my-12 max-w-2xl">
-        <div class="bg-white p-6 md:p-10 rounded-xl shadow-lg border border-blue-100 text-center">
-            <div class="text-green-500 mb-6">
-                <svg class="w-24 h-24 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            </div>
-            <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4">
-                Thank You for Registering!
-            </h1>
-            <p class="text-lg md:text-xl text-gray-600 mb-8">
-                Your registration with LearnFast has been successfully completed.
-                You are now ready to start your learning journey!
-            </p>
-            <p class="text-md text-gray-700 mb-10">
-                A confirmation email with your account details has been sent to your registered email address.
-            </p>
+    <!-- Main Content Area -->
+    <main class="flex-grow container mx-auto px-4 py-8 md:py-12 lg:py-16 flex items-center justify-center">
 
-            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                <a href="index.html" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                    Go to Homepage
-                </a>
-                <a href="#" class="bg-yellow-400 hover:bg-yellow-500 text-blue-800 font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                    Explore More Courses
-                </a>
+        <!-- Confirmation Section -->
+        <section class="bg-white p-6 md:p-10 lg:p-12 rounded-xl shadow-lg w-full max-w-2xl text-center">
+            <div class="mb-8">
+                <!-- Checkmark SVG icon -->
+                <svg class="w-24 h-24 mx-auto text-green-500 mb-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-2.29-9.29L7 11.29l2.71 2.71 6-6L14.29 7.71 9.71 12.29z"></path>
+                </svg>
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">Registration Successful!</h1>
+                <p class="text-lg md:text-xl text-gray-600">
+                    Thank you for registering for the LearnFast Data Analytics Course.
+                </p>
             </div>
-        </div>
+
+            <div class="bg-gray-50 p-6 rounded-lg mb-8">
+                <h2 class="text-2xl font-semibold text-indigo-700 mb-4">What's Next?</h2>
+                <ul class="list-disc list-inside space-y-3 text-left text-lg text-gray-700 max-w-xl mx-auto">
+                    <li>**Check Your Email:** You will receive a confirmation email shortly with your course access details and login instructions. Please check your inbox (and spam folder!).</li>
+                    <li>**Start Learning:** Once you have your login credentials, you can access the course content and begin your learning journey.</li>
+                    <li>**Join Our Community:** We'll also provide details on how to join our exclusive student community for support and networking.</li>
+                </ul>
+            </div>
+
+            <!-- Removed the buttons as requested -->
+
+        </section>
+
     </main>
 
-    <!-- Footer Section (reused from landing page) -->
-    <footer class="bg-gray-800 text-gray-300 py-8 mt-12 rounded-t-xl">
-        <div class="container mx-auto px-4 text-center">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-6">
-                <div class="mb-4 md:mb-0">
-                    <p class="text-xl font-bold">LearnFast</p>
-                    <p class="text-sm">Accelerate Your Learning Journey</p>
-                </div>
-                <div class="flex space-x-6">
-                    <a href="#" class="hover:text-white transition duration-300 ease-in-out">Privacy Policy</a>
-                    <a href="#" class="hover:text-white transition duration-300 ease-in-out">Terms of Service</a>
-                </div>
-            </div>
-            <p class="text-sm">&copy; 2025 LearnFast. All rights reserved.</p>
+    <!-- Footer Section (reused for consistency) -->
+    <footer class="bg-gray-800 text-white py-6 px-4 md:px-10 lg:px-16 text-center mt-auto rounded-t-lg">
+        <p>&copy; 2025 LearnFast. All rights reserved.</p>
+        <div class="mt-2 space-x-4">
+            <a href="about.html" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+            <span class="text-gray-500">|</span>
+            <a href="about.html" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
         </div>
     </footer>
 
 </body>
 </html>
-
