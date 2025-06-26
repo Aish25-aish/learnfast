@@ -1,9 +1,9 @@
-ister<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Title - LearnFast</title>
+    <title>LearnFast - Data Analytics Course</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts - Inter -->
@@ -11,172 +11,177 @@ ister<!DOCTYPE html>
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* Light blue-gray background */
-            color: #334155; /* Dark slate text */
-        }
-        /* Custom scrollbar for a nicer look */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #cbd5e1; /* Gray-300 */
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #3b82f6; /* Blue-500 */
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #2563eb; /* Blue-600 */
+            background-color: #f8fafc; /* Light gray background */
+            color: #334155; /* Darker text */
         }
     </style>
 </head>
-<body class="antialiased">
+<body class="min-h-screen flex flex-col">
 
-    <!-- Header Section (reused from landing page for consistency) -->
-    <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-lg p-4 md:p-6 rounded-b-xl">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-4">
-            <!-- Logo/Brand Name -->
-            <a href="index.html" class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 md:mb-0">
-                Learn<span class="text-yellow-300">Fast</span>
-            </a>
-            <!-- Navigation -->
-            <nav>
-                <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 text-lg font-medium">
-                    <li><a href="index.html#features" class="hover:text-yellow-300 transition duration-300 ease-in-out">Features</a></li>
-                    <li><a href="index.html#about" class="hover:text-yellow-300 transition duration-300 ease-in-out">About Us</a></li>
-                    <li><a href="index.html#testimonials" class="hover:text-yellow-300 transition duration-300 ease-in-out">Testimonials</a></li>
-                    <li><a href="index.html#contact" class="hover:text-yellow-300 transition duration-300 ease-in-out">Contact</a></li>
-                </ul>
-            </nav>
+    <!-- Header Section (reused from index.html for consistency) -->
+    <header class="bg-white shadow-sm py-4 px-6 md:px-10 lg:px-16 flex justify-between items-center rounded-b-lg">
+        <div class="flex items-center">
+            <a href="index.html" class="text-3xl font-bold text-indigo-700 tracking-tight">LearnFast</a>
         </div>
+        <nav class="hidden md:flex space-x-8">
+            <a href="index.html" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300">Home</a>
+            <a href="course.html" class="text-indigo-600 hover:text-indigo-800 font-medium transition duration-300">Courses</a>
+            <a href="about.html" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300">About Us</a>
+            <a href="register.html" class="text-indigo-600 hover:text-indigo-800 font-medium transition duration-300 px-4 py-2 rounded-lg border-2 border-indigo-600 hover:border-indigo-800">Sign Up</a>
+        </nav>
+        <!-- Mobile menu button (can add JS to toggle mobile menu) -->
+        <button class="md:hidden text-gray-600 hover:text-indigo-600 focus:outline-none">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
     </header>
 
-    <!-- Main Course Content Section -->
-    <main class="container mx-auto px-4 my-8 md:my-12 max-w-6xl">
-        <div class="bg-white p-6 md:p-10 rounded-xl shadow-lg border border-blue-100">
-            <!-- Course Title -->
-            <h1 class="text-3xl md:text-5xl font-extrabold text-gray-800 mb-4 text-center md:text-left">
-                Mastering Web Development with React
-            </h1>
-            <!-- Course Subtitle/Brief Description -->
-            <p class="text-lg md:text-xl text-gray-600 mb-6 text-center md:text-left">
-                Learn to build modern, interactive, and scalable web applications using React.js from scratch to advanced topics.
+    <!-- Main Content Area -->
+    <main class="flex-grow container mx-auto px-4 py-8 md:py-12 lg:py-16">
+
+        <!-- Course Header Section -->
+        <section class="bg-gradient-to-br from-indigo-600 to-purple-700 text-white p-6 md:p-10 lg:p-12 rounded-xl shadow-lg text-center mb-12">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">Data Analytics Course</h1>
+            <p class="text-lg md:text-xl opacity-90 max-w-3xl mx-auto">
+                Transform raw data into actionable insights and become an in-demand Data Analyst. This comprehensive course covers everything you need to know.
             </p>
+            <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="register.html" class="inline-block bg-white text-indigo-700 hover:bg-gray-100 font-bold py-3 px-8 rounded-full shadow-md transition duration-300 transform hover:scale-105">
+                    Enroll Now
+                </a>
+                <a href="#curriculum" class="inline-block text-white border-2 border-white hover:bg-white hover:text-indigo-700 font-bold py-3 px-8 rounded-full shadow-md transition duration-300 transform hover:scale-105">
+                    View Curriculum
+                </a>
+            </div>
+        </section>
 
-            <div class="flex flex-col md:flex-row items-start md:space-x-8">
-                <!-- Course Overview/Video Placeholder -->
-                <div class="md:w-2/3 mb-6 md:mb-0">
-                    <img src="https://placehold.co/800x450/BEE3F8/2B6CB0?text=Course+Overview+Video" alt="Course Overview" class="w-full rounded-lg shadow-md mb-6">
-
-                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Course Description</h2>
-                    <p class="text-gray-700 leading-relaxed mb-6">
-                        Dive deep into the world of front-end development with this comprehensive React course. From setting up your development environment to deploying full-stack applications, you'll gain hands-on experience with functional components, hooks, state management, routing, and API integration. This course is designed for both beginners with basic JavaScript knowledge and experienced developers looking to solidify their React skills.
-                    </p>
-
-                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">What You'll Learn</h2>
-                    <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6 ml-4">
-                        <li>Fundamentals of React and JSX</li>
-                        <li>Building reusable components</li>
-                        <li>State management with `useState` and `useReducer`</li>
-                        <li>Side effects with `useEffect`</li>
-                        <li>React Router for single-page applications</li>
-                        <li>Context API for global state</li>
-                        <li>Working with APIs and fetching data</li>
-                        <li>Deployment strategies for React apps</li>
+        <!-- Course Overview -->
+        <section class="bg-white p-6 md:p-10 lg:p-12 rounded-xl shadow-lg mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center">Course Overview</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-700">
+                <div>
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-3">What You'll Learn:</h3>
+                    <ul class="list-disc list-inside space-y-2 text-lg">
+                        <li>Data Collection and Cleaning</li>
+                        <li>Exploratory Data Analysis (EDA)</li>
+                        <li>Statistical Analysis and Hypothesis Testing</li>
+                        <li>Data Visualization with Tableau/Power BI</li>
+                        <li>SQL for Data Manipulation</li>
+                        <li>Introduction to Python for Data Analysis</li>
+                        <li>Building Dashboards and Reports</li>
+                        <li>Real-world Case Studies and Projects</li>
                     </ul>
-
                 </div>
-
-                <!-- Course Sidebar (Instructor, Details, Enrollment) -->
-                <div class="md:w-1/3 bg-blue-50 p-6 rounded-lg shadow-md border border-blue-200">
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Course Details</h3>
-                    <ul class="text-gray-700 space-y-3 mb-6">
-                        <li><span class="font-semibold">Instructor:</span> Jane Developer</li>
-                        <li><span class="font-semibold">Rating:</span> 4.8/5 (1,200 reviews)</li>
-                        <li><span class="font-semibold">Lectures:</span> 45</li>
-                        <li><span class="font-semibold">Duration:</span> 25 Hours</li>
-                        <li><span class="font-semibold">Level:</span> All Levels</li>
-                        <li><span class="font-semibold">Certificate:</span> Yes</li>
+                <div>
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-3">Who This Course Is For:</h3>
+                    <ul class="list-disc list-inside space-y-2 text-lg">
+                        <li>Beginners with no prior data experience</li>
+                        <li>Professionals looking to switch to a data role</li>
+                        <li>Analysts seeking to enhance their skills</li>
+                        <li>Anyone interested in understanding data-driven decision making</li>
                     </ul>
-
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">About the Instructor</h3>
-                    <div class="flex items-center mb-4">
-                        <img src="https://placehold.co/80x80/6366F1/FFFFFF?text=JD" alt="Jane Developer" class="w-20 h-20 rounded-full object-cover mr-4 border-2 border-blue-400">
-                        <div>
-                            <p class="font-semibold text-gray-800 text-lg">Jane Developer</p>
-                            <p class="text-gray-600 text-sm">Senior Front-End Engineer at TechCorp</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 text-sm mb-6">
-                        Jane is a passionate educator with over 10 years of experience in web development. She loves breaking down complex concepts into easy-to-understand lessons.
-                    </p>
-
-                    <div class="text-center">
-                        <p class="text-3xl font-bold text-blue-600 mb-4">
-                            $49.99 <span class="text-lg text-gray-500 line-through">$199.99</span>
-                        </p>
-                        <button class="bg-yellow-400 hover:bg-yellow-500 text-blue-800 font-bold py-4 px-8 rounded-full text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg w-full">
-                            Enroll Now
-                        </button>
-                    </div>
+                    <h3 class="text-2xl font-semibold text-indigo-700 mt-6 mb-3">Prerequisites:</h3>
+                    <p class="text-lg">No prior experience in programming or data analysis is required. A basic understanding of computers and mathematics is beneficial.</p>
                 </div>
             </div>
+        </section>
 
-            <!-- Course Curriculum Section -->
-            <div class="mt-12">
-                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-center md:text-left">
-                    Course Curriculum
-                </h2>
-                <div class="space-y-4">
-                    <!-- Module 1 -->
-                    <div class="bg-gray-50 p-5 rounded-lg shadow-sm border border-gray-200">
-                        <h3 class="font-semibold text-lg text-gray-800 mb-2">Module 1: Introduction to React</h3>
-                        <ul class="list-disc list-inside text-gray-600 space-y-1 ml-4">
-                            <li>Lesson 1.1: What is React and Why Use It?</li>
-                            <li>Lesson 1.2: Setting Up Your Development Environment</li>
-                            <li>Lesson 1.3: Understanding JSX</li>
-                        </ul>
-                    </div>
-                    <!-- Module 2 -->
-                    <div class="bg-gray-50 p-5 rounded-lg shadow-sm border border-gray-200">
-                        <h3 class="font-semibold text-lg text-gray-800 mb-2">Module 2: Components and Props</h3>
-                        <ul class="list-disc list-inside text-gray-600 space-y-1 ml-4">
-                            <li>Lesson 2.1: Functional vs. Class Components</li>
-                            <li>Lesson 2.2: Passing Data with Props</li>
-                            <li>Lesson 2.3: PropTypes and Default Props</li>
-                        </ul>
-                    </div>
-                    <!-- Module 3 -->
-                    <div class="bg-gray-50 p-5 rounded-lg shadow-sm border border-gray-200">
-                        <h3 class="font-semibold text-lg text-gray-800 mb-2">Module 3: State and Lifecycle Hooks</h3>
-                        <ul class="list-disc list-inside text-gray-600 space-y-1 ml-4">
-                            <li>Lesson 3.1: Managing State with useState</li>
-                            <li>Lesson 3.2: The useEffect Hook</li>
-                            <li>Lesson 3.3: Conditional Rendering</li>
-                        </ul>
-                    </div>
-                    <!-- Add more modules as needed -->
+        <!-- Curriculum Section -->
+        <section id="curriculum" class="bg-white p-6 md:p-10 lg:p-12 rounded-xl shadow-lg mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">Detailed Curriculum</h2>
+            <div class="space-y-6">
+                <!-- Module 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-2">Module 1: Introduction to Data Analytics</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li>What is Data Analytics?</li>
+                        <li>Roles of a Data Analyst</li>
+                        <li>Data vs. Information vs. Knowledge</li>
+                        <li>The Data Analysis Process</li>
+                    </ul>
+                </div>
+                <!-- Module 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-2">Module 2: Data Collection and Cleaning</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li>Sources of Data (Databases, APIs, Web Scraping)</li>
+                        <li>Handling Missing Values, Duplicates, and Outliers</li>
+                        <li>Data Transformation Techniques</li>
+                    </ul>
+                </div>
+                <!-- Module 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-2">Module 3: SQL for Data Analysis</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li>Introduction to Relational Databases</li>
+                        <li>Basic SQL Commands (SELECT, WHERE, GROUP BY, JOIN)</li>
+                        <li>Advanced SQL Queries for Analytics</li>
+                    </ul>
+                </div>
+                <!-- Module 4 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-2">Module 4: Data Visualization & Storytelling</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li>Principles of Effective Visualization</li>
+                        <li>Introduction to Tableau/Power BI</li>
+                        <li>Creating Interactive Dashboards</li>
+                        <li>Telling Stories with Data</li>
+                    </ul>
+                </div>
+                <!-- Module 5 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-2">Module 5: Introduction to Python for Data Analysis</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li>Python Basics for Data Science</li>
+                        <li>NumPy and Pandas for Data Manipulation</li>
+                        <li>Matplotlib and Seaborn for Visualization</li>
+                    </ul>
+                </div>
+                <!-- Module 6 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-2">Module 6: Capstone Project</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li>Apply learned skills to a real-world dataset</li>
+                        <li>Develop a comprehensive data analysis report</li>
+                        <li>Present findings and insights</li>
+                    </ul>
                 </div>
             </div>
+        </section>
 
-        </div>
+        <!-- Instructor Section -->
+        <section class="bg-white p-6 md:p-10 lg:p-12 rounded-xl shadow-lg mb-12 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8">Meet Your Instructor</h2>
+            <div class="flex flex-col items-center">
+                <img src="https://placehold.co/150x150/e0e7ff/4338ca?text=Instructor" alt="Instructor Profile Picture" class="w-32 h-32 rounded-full mb-4 shadow-md">
+                <h3 class="text-2xl font-semibold text-gray-700 mb-2">Dr. Anya Sharma</h3>
+                <p class="text-gray-600 max-w-2xl">
+                    Dr. Anya Sharma is a leading expert in Data Science with over 15 years of experience in the field. She has worked with Fortune 500 companies, specializing in predictive modeling and business intelligence. Her passion lies in making complex data concepts accessible and engaging for all learners.
+                </p>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="bg-gradient-to-br from-purple-600 to-indigo-700 text-white p-6 md:p-10 lg:p-12 rounded-xl shadow-lg text-center">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Ready to Start Your Data Journey?</h2>
+            <p class="text-lg md:text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+                Join our Data Analytics course today and gain the skills that employers are actively seeking. Enroll now and take the first step towards a rewarding career.
+            </p>
+            <a href="register.html" class="inline-block bg-white text-indigo-700 hover:bg-gray-100 font-bold py-4 px-10 rounded-full shadow-lg transition duration-300 transform hover:scale-105 text-xl">
+                Register for the Course
+            </a>
+        </section>
+
     </main>
 
-    <!-- Footer Section (reused from landing page) -->
-    <footer class="bg-gray-800 text-gray-300 py-8 mt-12 rounded-t-xl">
-        <div class="container mx-auto px-4 text-center">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-6">
-                <div class="mb-4 md:mb-0">
-                    <p class="text-xl font-bold">LearnFast</p>
-                    <p class="text-sm">Accelerate Your Learning Journey</p>
-                </div>
-                <div class="flex space-x-6">
-                    <a href="#" class="hover:text-white transition duration-300 ease-in-out">Privacy Policy</a>
-                    <a href="#" class="hover:text-white transition duration-300 ease-in-out">Terms of Service</a>
-                </div>
-            </div>
-            <p class="text-sm">&copy; 2025 LearnFast. All rights reserved.</p>
+    <!-- Footer Section (reused from index.html) -->
+    <footer class="bg-gray-800 text-white py-6 px-4 md:px-10 lg:px-16 text-center mt-auto rounded-t-lg">
+        <p>&copy; 2025 LearnFast. All rights reserved.</p>
+        <div class="mt-2 space-x-4">
+            <a href="about.html" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+            <span class="text-gray-500">|</span>
+            <a href="about.html" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
         </div>
     </footer>
 
