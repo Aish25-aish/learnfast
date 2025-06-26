@@ -3,130 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register - LearnFast</title>
+    <title>LearnFast - Register for Data Analytics Course</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts - Inter -->
-    <link href="confirmation.html" rel="stylesheet">
+    <link href="confirmation.html">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* Light blue-gray background */
-            color: #334155; /* Dark slate text */
-        }
-        /* Custom scrollbar for a nicer look */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #cbd5e1; /* Gray-300 */
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #3b82f6; /* Blue-500 */
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #2563eb; /* Blue-600 */
+            background-color: #f8fafc; /* Light gray background */
+            color: #334155; /* Darker text */
         }
     </style>
 </head>
-<body class="antialiased">
+<body class="min-h-screen flex flex-col">
 
-    <!-- Header Section (reused from landing page for consistency) -->
-    <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-lg p-4 md:p-6 rounded-b-xl">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-4">
-            <!-- Logo/Brand Name: Changed link to index.html -->
-            <a href="index.html" class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 md:mb-0">
-                Learn<span class="text-yellow-300">Fast</span>
-            </a>
-            <!-- Navigation -->
-            <nav>
-                <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8 text-lg font-medium">
-                    <li><a href="index.html#features" class="hover:text-yellow-300 transition duration-300 ease-in-out">Features</a></li>
-                    <li><a href="index.html#about" class="hover:text-yellow-300 transition duration-300 ease-in-out">About Us</a></li>
-                    <li><a href="index.html#testimonials" class="hover:text-yellow-300 transition duration-300 ease-in-out">Testimonials</a></li>
-                    <li><a href="index.html#contact" class="hover:text-yellow-300 transition duration-300 ease-in-out">Contact</a></li>
-                </ul>
-            </nav>
+    <!-- Header Section (reused for consistency) -->
+    <header class="bg-white shadow-sm py-4 px-6 md:px-10 lg:px-16 flex justify-between items-center rounded-b-lg">
+        <div class="flex items-center">
+            <a href="index.html" class="text-3xl font-bold text-indigo-700 tracking-tight">LearnFast</a>
         </div>
+        <nav class="hidden md:flex space-x-8">
+            <a href="index.html" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300">Home</a>
+            <a href="course.html" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300">Courses</a>
+            <a href="about.html" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300">About Us</a>
+            <a href="register.html" class="text-indigo-600 hover:text-indigo-800 font-medium transition duration-300 px-4 py-2 rounded-lg border-2 border-indigo-600 hover:border-indigo-800">Sign Up</a>
+        </nav>
+        <!-- Mobile menu button (can add JS to toggle mobile menu) -->
+        <button class="md:hidden text-gray-600 hover:text-indigo-600 focus:outline-none">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
     </header>
 
-    <!-- Registration Form Section -->
-    <main class="container mx-auto px-4 my-8 md:my-12 max-w-2xl">
-        <div class="bg-white p-6 md:p-10 rounded-xl shadow-lg border border-blue-100">
-            <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-6 text-center">
-                Register for Your Course
-            </h1>
-            <p class="text-md md:text-lg text-gray-600 mb-8 text-center">
-                Complete the form below to enroll and start your journey with LearnFast!
-            </p>
+    <!-- Main Content Area -->
+    <main class="flex-grow container mx-auto px-4 py-8 md:py-12 lg:py-16 flex items-center justify-center">
 
-            <form class="space-y-6">
-                <!-- Full Name -->
+        <!-- Registration Form Section -->
+        <section class="bg-white p-6 md:p-10 lg:p-12 rounded-xl shadow-lg w-full max-w-lg">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">Register for the Data Analytics Course</h1>
+            <p class="text-center text-gray-600 mb-8">Fill out the form below to enroll in our comprehensive Data Analytics course. We'll send course access details to your email.</p>
+
+            <form action="confirmation.html" method="GET" class="space-y-6">
                 <div>
-                    <label for="fullName" class="block text-gray-700 text-sm font-semibold mb-2">Full Name</label>
+                    <label for="fullName" class="block text-gray-700 text-lg font-medium mb-2">Full Name</label>
                     <input type="text" id="fullName" name="fullName" placeholder="John Doe"
-                           class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" required>
+                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-200 text-lg"
+                           required>
                 </div>
-
-                <!-- Email Address -->
                 <div>
-                    <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">Email Address</label>
+                    <label for="email" class="block text-gray-700 text-lg font-medium mb-2">Email Address</label>
                     <input type="email" id="email" name="email" placeholder="you@example.com"
-                           class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" required>
+                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-200 text-lg"
+                           required>
                 </div>
-
-                <!-- Password -->
                 <div>
-                    <label for="password" class="block text-gray-700 text-sm font-semibold mb-2">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Min. 8 characters"
-                           class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" required minlength="8">
+                    <label for="phone" class="block text-gray-700 text-lg font-medium mb-2">Phone Number (Optional)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890"
+                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-200 text-lg">
                 </div>
-
-                <!-- Confirm Password -->
                 <div>
-                    <label for="confirmPassword" class="block text-gray-700 text-sm font-semibold mb-2">Confirm Password</label>
-                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password"
-                           class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200" required>
+                    <label for="password" class="block text-gray-700 text-lg font-medium mb-2">Create Password</label>
+                    <input type="password" id="password" name="password" placeholder="********"
+                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-200 text-lg"
+                           required>
+                    <p class="text-sm text-gray-500 mt-1">Minimum 8 characters, including one uppercase, one lowercase, one number, and one special character.</p>
                 </div>
-
-                <!-- Terms and Conditions Checkbox -->
                 <div class="flex items-center">
-                    <input type="checkbox" id="terms" name="terms" class="h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" required>
-                    <label for="terms" class="ml-2 block text-sm text-gray-900">
-                        I agree to the <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Terms of Service</a> and <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Privacy Policy</a>.
-                    </label>
+                    <input type="checkbox" id="terms" name="terms" class="h-5 w-5 text-indigo-600 rounded focus:ring-indigo-500" required>
+                    <label for="terms" class="ml-2 block text-gray-700 text-base">I agree to the <a href="about.html" class="text-indigo-600 hover:text-indigo-800 font-medium">Terms of Service</a> and <a href="about.html" class="text-indigo-600 hover:text-indigo-800 font-medium">Privacy Policy</a>.</label>
                 </div>
 
-                <!-- Register Button -->
-                <div>
-                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
-                        Register
-                    </button>
-                </div>
+                <button type="submit" class="w-full bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition duration-300 transform hover:scale-105 text-xl">
+                    Complete Registration
+                </button>
             </form>
+        </section>
 
-            <p class="mt-8 text-center text-gray-600 text-sm">
-                Already have an account? <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Log In Here</a>
-            </p>
-        </div>
     </main>
 
-    <!-- Footer Section (reused from landing page) -->
-    <footer class="bg-gray-800 text-gray-300 py-8 mt-12 rounded-t-xl">
-        <div class="container mx-auto px-4 text-center">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-6">
-                <div class="mb-4 md:mb-0">
-                    <p class="text-xl font-bold">LearnFast</p>
-                    <p class="text-sm">Accelerate Your Learning Journey</p>
-                </div>
-                <div class="flex space-x-6">
-                    <a href="#" class="hover:text-white transition duration-300 ease-in-out">Privacy Policy</a>
-                    <a href="#" class="hover:text-white transition duration-300 ease-in-out">Terms of Service</a>
-                </div>
-            </div>
-            <p class="text-sm">&copy; 2025 LearnFast. All rights reserved.</p>
+    <!-- Footer Section (reused for consistency) -->
+    <footer class="bg-gray-800 text-white py-6 px-4 md:px-10 lg:px-16 text-center mt-auto rounded-t-lg">
+        <p>&copy; 2025 LearnFast. All rights reserved.</p>
+        <div class="mt-2 space-x-4">
+            <a href="about.html" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+            <span class="text-gray-500">|</span>
+            <a href="about.html" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
         </div>
     </footer>
 
